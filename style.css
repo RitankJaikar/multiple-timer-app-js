@@ -1,0 +1,159 @@
+* {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: #1D1D23;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 44px;
+    padding: 20px 26vw;
+}
+
+.main h1 {
+    margin: 0px;
+}
+
+.timer-div {
+    background-color: #34344A;
+    padding: 24px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+    width: 100%;
+    position: relative;
+}
+
+.timer-div button {
+    background-color: #F0F757;
+    border-radius: 40px;
+    color: #34344A;
+    padding: 10px 24px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100px;
+}
+
+.timer-div .timer-wrapper {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.timer-wrapper span {
+    margin: 0px 6px;
+}
+
+.timer-div .timer-wrapper input, .time {
+    background-color: transparent;
+    border: none;
+    font-size: 36px;
+    max-width: 80px;
+    padding: 4px;
+}
+
+.timer-div .timer-wrapper input {
+    border-bottom: 3px solid white;
+}
+
+.timer-div input::placeholder {
+    color: white;
+}
+
+.timer-div input:focus-visible {
+    border: none;
+    outline: 3px solid white;
+    border-radius: 10px;
+}
+
+.hour {
+    max-width: 54px;
+}
+
+.min {
+    max-width: 80px;
+}
+
+.sec {
+    max-width: 54px;
+}
+
+/*Remove Arrows in input type number*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.current-timers {
+    background-color: #39393E;
+    border-radius: 40px;
+    padding: 16px 80px;
+}
+
+.time-up-div {
+    background-color: #F0F757;
+    color: #34344A;
+    flex-direction: row-reverse;
+}
+
+.time-up-div .time-up {
+    color: #34344A;
+    font-size: 36px;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+
+}
+
+.time-up-div .stop {
+    background-color: #34344A;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1300px){
+    .main {
+        padding: 20px 20vw;
+    }
+}
+
+@media screen and (max-width: 1060px){
+    .main {
+        padding: 20px 10vw;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .main {
+        padding: 20px 4vw;
+    }
+
+    .timer-div {
+        flex-direction: column;
+        padding: 24px 8px;
+    }
+
+    .timer-div .timer-wrapper, .timer-div .timer-wrapper input, .time {
+        font-size: 28px !important;
+        font-weight: 500;
+    }
+
+    .time-up-div .time-up {
+        position: static;
+    }
+}
