@@ -13,7 +13,7 @@ form.addEventListener("submit", e => {
     let secVal= parseInt(sec.value) || 0;
     let inSec= hourVal*60*60 + minVal*60 + secVal;
 
-    console.log(hourVal, minVal, secVal, inSec);
+    //console.log(hourVal, minVal, secVal, inSec);
 
     if(inSec>0) {
         addTimer(inSec, timerCount);
@@ -102,7 +102,7 @@ function addTimer(inSec, timerCount) {
         hourSpan.innerText= String(hourValue).padStart(2, '0');
         minSpan.innerText= String(minValue).padStart(2, '0');
         secSpan.innerText= String(secValue).padStart(2, '0');
-        console.log(inSec);
+        //console.log(inSec);
         inSec--;
     }, 1000);
 
@@ -118,7 +118,7 @@ function addTimer(inSec, timerCount) {
 }
 
 function deleteTimer(e, timerCount) {
-    console.log(e.target.parentNode);
+    //console.log(e.target.parentNode);
     const intervalId= intervalMap.get(timerCount);
     if(intervalId) {
         clearInterval(intervalId);
